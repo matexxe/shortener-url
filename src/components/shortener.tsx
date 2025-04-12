@@ -55,6 +55,7 @@ export function LinkShortener() {
       const data = await response.json();
       setShortUrl(data.shortUrl);
       setShowSuccess(true);
+      setUrl("");
     } catch (err) {
       setError(
         err instanceof Error ? err.message : "An unknown error occurred"
